@@ -8,12 +8,14 @@ const bio = document.querySelector('.bio')
 const menuList = document.querySelectorAll('.list-group-item')
 const menu = document.querySelector('.menu')
 const displayContainer = document.querySelector('.display-my-stuff')
+const resumeBtn = document.querySelector('#resume')
 const projectBtn = document.querySelector('#project')
-const websiteBtn = document.querySelector('#website')
-const gameBtn = document.querySelector('#game')
-const websites = document.querySelector('.websites')
+const certificationsBtn = document.querySelector('#certifications')
+const accomplishmentsBtn = document.querySelector('#accomplishments')
+const certifications = document.querySelector('.certifications')
 const projects = document.querySelector('.projects')
-const games = document.querySelector('.games')
+const resume = document.querySelector('.resume')
+const accomplishments = document.querySelector('.accomplishments')
 const aboutContainer = document.querySelector('.about')
 const cards = document.querySelectorAll('.card')
 let nightMode = false
@@ -65,20 +67,25 @@ menuBtn.addEventListener('click',()=>{
   }
 })
 //what will be shown depending on menu choice
+resumeBtn.addEventListener('click',()=>{
+  displayContainer.innerHTML = ''
+  displayContainer.appendChild(resume)
+  resume.scrollIntoView()
+})
 projectBtn.addEventListener('click',()=>{
   displayContainer.innerHTML = ''
   displayContainer.appendChild(projects)
   projects.scrollIntoView()
 })
-websiteBtn.addEventListener('click',()=>{
+certificationsBtn.addEventListener('click',()=>{
   displayContainer.innerHTML = ''
-  displayContainer.appendChild(websites)
-  websites.scrollIntoView()
+  displayContainer.appendChild(certifications)
+  certifications.scrollIntoView()
 })
-gameBtn.addEventListener('click',()=>{
+accomplishmentsBtn.addEventListener('click',()=>{
   displayContainer.innerHTML = ''
-  displayContainer.appendChild(games)
-  games.scrollIntoView()
+  displayContainer.appendChild(accomplishments)
+  accomplishments.scrollIntoView()
 })
 
 //bio change buttons
